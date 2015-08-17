@@ -19,7 +19,7 @@ end
 -- Usage: object = object involved in rotation, newX = target x, newY = target y, speed = speed of the movement (8 is a good value), fps of the app
 
 moveTo = function(object, newX, newY, speed, fps)
-    if (object.x ~= newX) and (object.Y ~= newY)  then
+    if (object.x ~= newX) or (object.y ~= newY)  then
         local spaceX = math.abs(object.x - newX)
         local spaceY = math.abs(object.y - newY)
         local calculatedTime = (( spaceX + spaceY ) * speed) / (1000/fps)
@@ -43,7 +43,7 @@ moveTo = function(object, newX, newY, speed, fps)
         if not moveY then
             if object.y > newY then
                 object.y = object.y - spaceY/calculatedTime
-                if neasis.y <= newY then
+                if object.y <= newY then
                     moveY = true
                 end
             else
