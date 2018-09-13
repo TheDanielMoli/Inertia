@@ -1,18 +1,18 @@
--- Copyright 2015 Daniele Molinari www.danielemolinari.it
+-- Copyright 2018 Sadkit
 --
--- Corona SDK Tranzition Library
+-- Corona SDK Inertia Framework
 --
--- Usage: local tranzition = require("tranzition")
+-- Usage: local inertia = require("inertia")
 
 module(..., package.seeall)
 
 -- Usage: object = object involved in rotation, time = time in millis for a 360 degree rotation (period), fps of the app
 
-rotate = function (object, time, fps)
+rotate = function (object, fps)
     if (object.rotation >= 360) then
         object.rotation = 0
     end
-    time = 4000 / (1000/fps)
+    local time = 4000 / (1000/fps)
     object.rotation = object.rotation + 360/time
 end
 
