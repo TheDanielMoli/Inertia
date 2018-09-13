@@ -1,2 +1,2 @@
-# Tranzition
-Corona SDK Tranzition Library [Frame by frame transition &amp; rotation]
+# Inertia
+Corona SDK Inertia Framework - Frame by frame movement
